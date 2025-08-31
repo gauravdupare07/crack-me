@@ -43,13 +43,6 @@ h1 {
     width: 100%;
 }
 
-.timer {
-    margin-top: 12px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
 .lock-animation {
     margin-top: 0px auto;
     position: relative;
@@ -207,4 +200,5 @@ input::-webkit-inner-spin-button {
     70% { transform: scale(.9); }
     100% { transform: scale(1); }
 }
+
 
