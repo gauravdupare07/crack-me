@@ -32,35 +32,4 @@ function animateWithReflow(element, animation) {
 }
 
 
-let countdownTime = 60; // total time in seconds (1 min)
-let timerInterval;
-let timeLeft;
-
-function startTimer() {
-    clearInterval(timerInterval); // clear old timer if running
-    timeLeft = countdownTime;     // reset time
-    updateTimer();                // show immediately
-    timerInterval = setInterval(updateTimer, 1000);
-}
-
-function updateTimer() {
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
-    document.getElementById("timer").textContent =
-        `Time left: ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-
-    if (timeLeft <= 0) {
-        clearInterval(timerInterval);
-        playTimeoutSound();
-        document.getElementById("timer").textContent = "⏰ Time’s up!";
-    }
-
-    timeLeft--;
-}
-
-function resetTimer() {
-    clearInterval(timerInterval);
-    startTimer();
-}
-
 
