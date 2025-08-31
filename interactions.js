@@ -27,6 +27,7 @@ function updateTimer() {
 function resetTimer() {
     clearInterval(timerInterval);
     startTimer();
+}
 
 function onCodeInput(number) {
     var currentText = document.getElementById("guess" + number).value
@@ -58,4 +59,5 @@ function animateWithReflow(element, animation) {
     document.getElementById(element).classList.add(animation)
     document.getElementById(element).style.opacity = "1"
 }
+
 
