@@ -14,7 +14,7 @@
 
 
 
-<body onload="generateNew()">
+<body onload="generateNew(); startTimer();">
     <!--Intro-->
     <div id="intro" class="intro">
         <h1>CRACK THE CODE</h1>
@@ -24,6 +24,9 @@
     <!--Header-->
     <div class="header">
         <span id="headerLabel">CAN YOU CRACK THE CODE?</span>
+        
+    </div>
+    <div class="timer">⏱ <span id="timer"></span> sec</div>
     </div>
 
 
@@ -76,7 +79,7 @@
     </div>
 
     <!--Continue Button-->
-    <button onclick="generateNew()" id="continueButton" class="continue-button">Continue</button>
+    <button onclick="generateNew(); resetTimer()" id="continueButton" class="continue-button">Continue</button>
     
     <!--Footer-->
 
@@ -87,3 +90,4 @@
 
 </body>
 </html>
+
